@@ -1,0 +1,1101 @@
+@font-face{
+    src: url(../include/BlaxSlabXXL.ttf);
+    font-family: BL;
+}
+
+body{
+    font-family: 'Open Sans', Helvetica, Sans-Serif;
+    margin: 0;
+}
+/*
+    Mobile Menu Core Style
+*/
+
+.slicknav_btn { position: relative; display: block; vertical-align: middle; float: left; padding: 0.438em 0.625em 0.438em 0.625em; line-height: 1.125em; cursor: pointer; }
+.slicknav_menu  .slicknav_menutxt { display: block; line-height: 1.188em; float: left; }
+.slicknav_menu .slicknav_icon { float: left; margin: 0.188em 0 0 0.438em; }
+.slicknav_menu .slicknav_no-text { margin: 0 }
+.slicknav_menu .slicknav_icon-bar { display: block; width: 1.125em; height: 0.125em; -webkit-border-radius: 1px; -moz-border-radius: 1px; border-radius: 1px; -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25); -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25); box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25); }
+.slicknav_btn .slicknav_icon-bar + .slicknav_icon-bar { margin-top: 0.188em }
+.slicknav_nav { clear: both }
+.slicknav_nav ul,
+.slicknav_nav li { display: block }
+.slicknav_nav .slicknav_arrow { font-size: 0.8em; margin: 0 0 0 0.4em; }
+.slicknav_nav .slicknav_item { display: block; cursor: pointer; }
+.slicknav_nav a { display: block }
+.slicknav_nav .slicknav_item a { display: inline }
+.slicknav_menu:before,
+.slicknav_menu:after { content: " "; display: table; }
+.slicknav_menu:after { clear: both }
+
+
+/* 
+    User Default Style
+    Change the following styles to modify the appearance of the menu.
+*/
+
+.slicknav_menu {
+    font-size:16px;
+}
+
+/* Button */
+.slicknav_btn {
+    margin: 1rem .5rem 1rem .5rem;    
+    text-decoration:none;   
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);   
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;  
+    background-color: #222222;
+}
+
+/* Button Text */
+.slicknav_menu  .slicknav_menutxt { 
+    color: #FFF;
+    font-weight: bold;  
+    text-shadow: 0 1px 3px #000;    
+}
+
+/* Button Lines */
+.slicknav_menu .slicknav_icon-bar {
+  background-color: #f5f5f5;
+}
+
+.slicknav_menu {
+    /*background:#4c4c4c;*/
+    padding:5px;
+    width: 15rem;
+   /* height: 4.063rem ;*/
+}
+
+.slicknav_nav {
+    color:#fff;
+    margin:0;   
+    padding:0;
+    font-size:0.875em;
+}
+
+.slicknav_nav, .slicknav_nav ul {
+    list-style: none;
+    overflow:hidden;
+}
+
+.slicknav_nav ul {
+    padding:0;
+    margin:0 0 0 20px;
+}
+
+.slicknav_nav .slicknav_item {
+    padding:5px 10px;
+    margin:2px 5px;
+}
+
+.slicknav_nav a{
+    padding:5px 10px;
+    margin:2px 5px;
+    text-decoration:none;
+    color:#000;
+    width:500px;
+}
+
+.slicknav_nav .slicknav_item a {
+    padding:0;
+    margin:0;
+}
+
+.slicknav_nav .slicknav_item:hover {
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    background:#ccc;
+    color:#fff; 
+}
+
+.slicknav_nav a:hover{
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    background:#ccc;
+    color:#222;
+}
+
+.slicknav_nav .slicknav_txtnode {
+     margin-left:15px;   
+}
+
+
+/* =============================================================
+
+    Slider v4.2
+    A simple, responsive, touch-enabled image slider, forked from Swipe.
+
+    Script by Brad Birdsall.
+    http://swipejs.com/
+
+    Forked by Chris Ferdinandi.
+    http://gomakethings.com
+
+    Code contributed by Ron Ilan.
+    https://github.com/bradbirdsall/Swipe/pull/277#issuecomment-26032132
+
+    Licensed under the MIT license.
+    http://gomakethings.com/mit/
+
+ * ============================================================= */
+/*  When HTML5 JS features supported, hide slider */
+.js-slider .slider {
+  position: relative;
+  overflow: hidden;
+  visibility: hidden;
+  /* required for windows phone: */
+  -ms-touch-action: none;
+  touch-action: none;
+}
+
+/*  When HTML5 JS features supported, hide slides */
+.js-slider .slides {
+  overflow: hidden;
+  position: relative;
+}
+
+/*  Add a margin-bottom to each slide */
+.slides > div {
+  margin-bottom: 0.3125em;
+}
+
+/*  When HTML5 JS features supported, set width to 100%
+ *  and float slides to the left. */
+.js-slider .slides > div {
+  width: 100%;
+  float: left;
+  position: relative;
+}
+
+/*  Make slider images and videos fluid */
+.slides img,
+.slides video,
+.slides iframe {
+  max-width: 100%;
+}
+
+.slides img,
+.slides video {
+  width: 100%;
+  height: auto;
+}
+
+/*  Remove floats */
+.slider:before,
+.slider:after {
+  display: table;
+  content: "";
+}
+
+/*  Remove floats */
+.slider:after {
+  clear: both;
+}
+
+
+/*front page*/
+
+#main-navigation{
+    height: 4rem;
+    line-height: 4rem;
+    margin-bottom: .5rem;
+    width: 12rem;
+    height: 4.063rem;
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#main-navigation ul{
+    padding-left: 0.5rem;
+    margin: 0;
+    list-style: none;
+}
+
+#main-navigation a{
+    text-decoration: none;
+    /*padding-right: .5em;*/
+    display: none;
+}
+
+#icons a{
+    display: inline-block;
+}
+
+#main-navigation li{
+    float: left;
+    margin-top:0;
+}
+
+#main-navigation img{
+    vertical-align: middle;
+    margin-right: 0.1rem;
+    max-width: 50%;
+}
+
+#main-navigation ul:nth-last-child(1) {
+    float: right;
+}
+
+#main-navigation ul:nth-last-child(1) img {
+    margin-right: 0;
+}
+
+.focal-point {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+ 
+.focal-point img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-left: 0;
+    margin-right: 0;
+}
+ 
+.focal-point div {
+    position: relative; 
+    max-width: none; 
+    height: auto;
+}
+
+h1{
+    font-family: BL;
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/*quote 1*/
+
+#quote1,
+#quote2,
+#quote3{
+    max-width: 100%;
+}
+
+.cup1 img,
+.cup2 img,
+.cup3 img{
+    max-width: 15rem;
+    display: block;
+    margin: 0 auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    clear: both;
+}
+
+.quote1 p,
+.quote2 p,
+.quote3 p{
+    max-width: 17rem;
+    text-align: center;
+    margin:0 auto;
+    position: relative;
+}
+
+.quote1 p span,
+.quote2 p span,
+.quote3 p span{
+    position: absolute;
+    display: block;
+    margin-left: 9em;
+    clear: both;
+}
+
+.logo1 img,
+.logo2 img,
+.logo3 img{
+    max-width: 15rem;
+    display: block;
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+a{
+    color: #c8102e;
+    text-decoration:none;
+    text-align: left;
+}
+
+.slider{
+    width:100%;
+}
+
+.slider .slides img{
+    max-width: 1200px;
+}
+
+/*Home game schedule and tickets*/
+.schedule h1:not(#newsletter){
+    font-family: 'Open Sans';
+    background-color: #C8102E;
+    color: #fff;
+    text-transform:uppercase;
+    font-size: 1.8rem;
+    max-width: 60rem;
+}
+
+.schedule{
+    max-width: 120rem;
+}
+
+.schedule #black,
+.schedule #black1,
+.schedule #black2,
+.schedule #black3,
+.schedule #black4{
+    float: left;
+    margin-left: 1rem;
+}
+
+.schedule #louis,
+.schedule #louis1,
+.schedule #louis2,
+.schedule #louis3,
+.schedule #louis4{
+    float: right;
+    margin-right: 1rem;
+}
+
+.schedule article p {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.schedule input{
+    background-color: #C8102E;
+    color: #fff;
+    border-radius: .5rem;
+    padding:.7rem;
+    font-size: 1.25rem;
+    display: block;
+    max-width: 100%;
+    margin:0 auto;
+}
+
+.teams {
+    text-align: center;
+    line-height: 120px;
+    font-size: 1.5rem;
+}
+
+.date {
+    text-align: center;
+    max-width: 100%;
+}
+
+
+/* Newsletter */
+#newsletter{
+    background-image: url(../img/newsletter.jpg);
+    height: 23.75rem;
+    max-width: 22.5rem;
+    margin-top: 4rem;
+    display: block;
+    margin: 0 auto;
+}
+
+#newsletter h1{
+    padding-top: .7rem;
+    padding-bottom: .7rem;
+}
+
+#first-name,
+#email,
+#sign-up{
+    background-color: #1E1E1E;
+    color: #fff;
+    border-radius: .5rem;
+    padding:.7rem;
+    font-size: 1.25rem;
+    display: block;
+    margin:0 auto;
+    margin-top: 1rem;
+}
+
+#first-name,
+#email{
+    width: 16rem;
+}
+
+#sign-up{
+    max-width: 100%;
+}
+
+
+/* Map */
+#map{
+    max-width: 30rem;
+    display: block;
+    margin: 0 auto;
+}
+
+#map h1{
+    padding-top: .7rem;
+    padding-bottom: .7rem;
+    display: block;
+    margin: 0 auto;
+    max-width:  30rem;
+}
+
+#custom-map{
+    max-width: 30rem;
+    height: 20rem;
+    box-shadow: 0 0 10px 0 #888;
+    margin: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* Contact */
+.contact {
+    max-width: 100%;
+    margin-left: 1rem;
+}
+
+.contact h2{
+    text-transform: uppercase;
+}
+
+.contact p{
+    font-size: 1.125rem;
+}
+
+.contact #web{
+    font-size: 1.1rem;
+}
+
+.contact #box{
+    font-size: 0.85rem;
+}
+
+
+/*  Footer */
+footer{
+    height: 4rem;
+    line-height: 4rem;
+    margin-bottom: .5rem;
+}
+
+footer ul{
+    padding-left: 0.5rem;
+    margin: 0;
+    list-style: none;
+}
+
+footer a{
+    text-decoration: none;
+    padding-right: .5em;
+}
+
+footer li{
+    float: left;
+}
+footer img{
+    max-width: 100%;
+    display: block;
+    margin:0 auto;
+    padding: .5rem;
+}
+
+/*player profiles*/
+#player-profiles{
+    margin:0 auto;
+    display: block;
+    margin-bottom: 3em;
+    clear: both;
+}
+#player-profiles img{
+    padding: 0;
+  /*  float: left;*/
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    clear: both;
+}
+
+#toews .pro-title,
+#crawford .pro-title,
+#kane .pro-title,
+#hossa .pro-title,
+#sharp .pro-title,
+#seabrook .pro-title,
+#hjalmarsson .pro-title,
+#keith .pro-title{
+    max-width: 30em;
+}
+
+.pro-title{
+    float: left;
+    position: relative;
+    width: 100%;
+}
+
+.pro-title:hover .bio{
+    display: block;
+}
+
+.bio{
+    display: none;
+    padding: 0px;
+    padding-left: 1rem;
+    color: #fff;
+    background: rgba(0,0,0,0.7);
+    font-size: 1rem;
+    margin: 0;
+    width: 480px;
+    height: 100%;
+}
+
+.bio h3{
+    padding-top: 0.2rem;
+}
+
+.bio h3,
+.bio h4{
+    text-align: center;
+    margin: 0;
+    font-style: italic; 
+    font-size: 1rem;
+}
+
+.bio p{
+    /*margin: 0.75rem*/;
+    padding-left: 5.5rem;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.pro-title:hover .bio-overlay{
+    opacity: 1;
+}
+
+.bio-overlay {
+    position: absolute;
+    display: block;
+    left: 50%;
+    margin-left: -240px;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    transition:0.3s ease;
+    -webkit-backface-visibility: hidden;
+    z-index: 10;
+    top: 0;
+    max-width: 100%;
+   bottom: 0;
+}
+
+.hide {
+    display:none;
+}
+
+
+/* 380px - 340px */
+@media all and (max-width: 23.75em) and (min-width: 21.25em)  {
+        .bio{
+            padding-top: 1.5rem;
+            font-size: 1.3rem;
+        }
+}
+
+/* 480px - 380px */
+@media all and (max-width: 30em) and (min-width: 23.75em)  {
+        .bio{
+            padding-top: 1.9rem;
+            font-size: 1.5rem;
+        }  
+}
+
+/* 480px - 400px */
+@media all and (max-width: 30em) and (min-width: 25em)  {
+        h1{
+            font-size: 3.8rem;
+        }
+    }
+
+/* 600px - 500px */
+@media all and (max-width: 37.5em) and (min-width: 31.25em)  {
+
+    /*Home game schedule and tickets*/
+
+        .schedule #black,
+        .schedule #black1,
+        .schedule #black2,
+        .schedule #black3,
+        .schedule #black4{
+            float: left;
+            margin-left: 3rem;
+        }
+
+        .schedule #louis,
+        .schedule #louis1,
+        .schedule #louis2,
+        .schedule #louis3,
+        .schedule #louis4{
+            float: right;
+            margin-right: 3rem;
+        }
+
+        .schedule input{
+            margin-bottom: 2rem;
+        }
+
+    }
+
+
+/*750px - 600px */
+@media all and (max-width: 46.875em) and (min-width: 37.5em)  {
+
+    /*Home game schedule and tickets*/
+
+        .schedule #black,
+        .schedule #black1,
+        .schedule #black2,
+        .schedule #black3,
+        .schedule #black4{
+            float: left;
+            margin-left: 6rem;
+        }
+
+        .schedule #louis,
+        .schedule #louis1,
+        .schedule #louis2,
+        .schedule #louis3,
+        .schedule #louis4{
+            float: right;
+            margin-right: 6rem;
+        }
+
+        .schedule input{
+            margin-bottom: 2rem;
+        }
+
+    }
+
+
+/* 1920px - 749px */
+@media all and (max-width: 120em) and (min-width: 46.872em)  {
+
+    /*Home game schedule and tickets*/
+
+        .schedule #black,
+        .schedule #black1,
+        .schedule #black2,
+        .schedule #black3,
+        .schedule #black4{
+            margin-left: 3rem;
+        }
+
+        .schedule article p {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .schedule input{
+             margin-right: 40px;
+        }
+
+        .teams {
+            max-width: 30rem;
+        }
+
+        .date {
+            max-width: 17rem;
+            margin-left: 500px;
+            margin-top: -7em;
+        }
+
+    }
+
+
+/* 1920px - 100px*/
+@media all and (max-width: 120em) and (min-width: 62.5em)  {
+
+        #slider{
+           clear: both
+        }
+}
+
+
+/* 1920px - 512px */
+@media all and (max-width: 120em) and (min-width: 32em)  {
+
+        #main-navigation{
+            width: 15rem;
+        }
+
+        #main-navigation img{
+            max-width: 100%;
+            padding-right: .5rem;
+        }
+
+        .bio{
+            display: none;
+            padding: 0px;
+            color: #fff;
+            background: rgba(0,0,0,0.7);
+            width: 480px;
+            height: 320px;
+        }
+
+        .bio h3{
+            padding-top: 10px;
+        }
+
+        .bio h3,
+        .bio h4{
+            text-align: center;
+            margin: 0;
+            font-style: italic; 
+        }
+
+        .bio p{
+            margin: 0.75rem;
+            padding-left: 2.5rem;
+        }
+
+        .pro-title:hover .bio-overlay{
+            opacity: 1;
+        }
+
+        .bio-overlay {
+            position: absolute;
+            display: block;
+            left: 50%;
+            margin-left: -240px;
+            -webkit-transition: 0.3s ease;
+            -moz-transition: 0.3s ease;
+            transition:0.3s ease;
+            -webkit-backface-visibility: hidden;
+            z-index: 10;
+            top: 0;
+        }
+     }
+
+
+/* 800px - 480px */
+@media all and (max-width: 50em) and (min-width: 30em) {
+
+        h1{
+            font-size: 4rem;
+        }
+
+        #email input {
+             margin-right: 0;
+        }
+    }
+
+
+/* 1080px - 800px */
+@media all and (max-width: 67.5em) and (min-width: 50em) {
+
+        h1{
+            font-size: 6rem;
+        }
+    }
+
+
+/* 1920px - 1000px */
+@media all and (max-width: 120em) and (min-width: 62.5em)  {
+    /*quote 1*/
+
+        #quote1,
+        #quote2,
+        #quote3{
+            margin: 0 auto;
+            display: block;
+            width: 1920px;
+            clear: both;
+        }
+
+        .cup1 img,
+        .cup2 img,
+        .cup3 img{
+            float: left;
+            padding-left: 3rem;
+            padding-right: 1rem;
+            display: inline-block;
+        }
+
+        .quote1 p,
+        .quote2 p,
+        .quote3 p{
+            margin-top: 2rem;
+            display: inline-block;
+            float: left;
+            max-width: 20rem;
+            padding-left: 2rem;
+            padding-right:1rem;
+            padding-top: 3rem;
+        }
+
+        .logo1 img,
+        .logo2 img,
+        .logo3 img{
+            float: left;
+            padding-left: 3rem;
+            display: inline-block;
+        }
+
+        #schedule{
+            clear: both;
+        }
+    }
+
+
+/* 1080px */
+@media all and (max-width: 67.5em) {
+        .right-3 div {
+            margin-left:  -10em;
+            margin-right: -8em;
+        } 
+}
+
+
+/* 1400px - 1250 */
+@media all and (max-width: 87.5em) and (min-width: 78.125em) {
+
+        h1{
+            font-size: 8rem;
+        }
+
+        .cup1 img,
+        .cup2 img,
+        .cup3 img{
+            padding-left: 7rem;
+            padding-right: 2rem;   
+        }
+
+        .quote1 p,
+        .quote2 p,
+        .quote3 p{
+            margin-top: 2rem;
+            max-width: 22rem;
+            padding-left: 4rem;
+            padding-right:5rem;
+            padding-top: 2rem;
+        }
+
+        .logo1 img,
+        .logo2 img,
+        .logo3 img{
+            padding-left: 5rem;
+        }
+
+        .quote1 p span,
+        .quote2 p span,
+        .quote3 p span{
+            margin-left: 18rem;
+        }
+
+        #schedule{
+            clear: both;
+        }
+    }
+
+
+/* 1920px - 1200px */
+@media all and (max-width: 120em) and (min-width: 75em) {
+
+        .slider .slides img{
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+
+/* 1920px - 960px */
+@media all and (max-width: 120em) and (min-width: 60em) {
+
+          .schedule article:after {
+            content: '';
+            display: block;
+            clear: both;
+          }
+
+          .teams {
+            float: left;
+            width: 500px;
+          }
+
+          .date {
+            float: left;
+            padding-top: .2em;
+          }
+
+          #buy-tickets{
+            margin-top: 10px;
+          }
+
+          #map{
+            display: inline-block;
+            width: 600px;   
+        }
+
+        #footer{
+            float: left;
+        }
+
+        #newsletter{
+            float: left;
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+
+        #toews .pro-title,
+        #crawford .pro-title,
+        #kane .pro-title,
+        #hossa .pro-title,
+        #sharp .pro-title,
+        #seabrook .pro-title,
+        #hjalmarsson .pro-title,
+        #keith .pro-title{
+            max-width: 30em;
+            display: inline-block;
+            float: left;
+        }
+
+        .pro-title{
+            float: left;
+            position: relative;
+            max-width: 30em;    
+        }
+    }
+
+
+/* 1600px - 1400px */
+@media all and (max-width: 100em) and (min-width: 87.5em) {
+
+        h1{
+            font-size: 10rem;
+        }
+
+        .cup1 img,
+        .cup2 img,
+        .cup3 img{
+            padding-left: 6rem;
+            padding-right: 5rem;
+         }
+
+        .quote1 p,
+        .quote2 p,
+        .quote3 p{
+            margin-top: 2rem;
+            max-width: 30rem;
+            padding-left: 1rem;
+            padding-right:3rem;
+            padding-top: 3rem;  
+        }
+
+        .logo1 img,
+        .logo2 img,
+        .logo3 img{
+            padding-left: 3rem;
+        }
+
+        .quote1 p span,
+        .quote2 p span,
+        .quote3 p span{
+            margin-left: 23rem;  
+        }
+    }
+
+/*1660px - 1600px */
+@media all and (max-width: 103.75em) and (min-width: 100em) {
+
+        h1{
+            font-size: 10.5rem;
+        }
+
+         .cup1 img,
+         .cup2 img,
+         .cup3 img{
+            padding-left: 9rem;
+            padding-right: 4rem;
+        }
+
+        .quote1 p,
+        .quote2 p,
+        .quote3 p{
+            margin-top: 2rem;
+            max-width: 30rem;
+            text-align: center;
+            padding-left: 3rem;
+            padding-right:5rem;
+            padding-top: 3rem;  
+        }
+
+        .logo1 img,
+        .logo2 img,
+        .logo3 img{
+            padding-left: 5rem; 
+        }
+
+        .quote1 p span,
+        .quote2 p span,
+        .quote3 p span{
+            margin-left: 25em;
+        }
+    }
+
+
+/* 1920px - 1660px */
+@media all and (max-width: 120em) and (min-width: 103.75em) {
+
+        h1{
+            font-size: 11rem;
+        }
+
+        .cup1 img,
+        .cup2 img,
+        .cup3 img{
+            float: left;
+            padding-left: 12rem;
+            padding-right: 7rem;
+            display: inline-block;   
+        }
+
+        .quote1 p,
+        .quote2 p,
+        .quote3 p{
+            margin-top: 2rem;
+            display: inline-block;
+            float: left;
+            max-width: 40rem;
+            text-align: center;
+            padding-left: 2rem;
+            padding-right:5rem;
+            padding-top: 3rem;          
+        }
+
+        .logo1 img,
+        .logo2 img,
+        .logo3 img{
+            float: left;
+            padding-left: 7rem;
+            display: inline-block;
+        }
+
+
+        .quote1 p span,
+        .quote2 p span,
+        .quote3 p span{
+            margin-left: 28em;   
+        }
+
+        #schedule{
+            clear: both;
+            max-width: 960px;
+        }
+    }
